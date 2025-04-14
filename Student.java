@@ -4,6 +4,8 @@ public class Student {
     private String studentName;
     private int ID;
     private ArrayList<Course> enrolledCourses;
+    ArrayList<Course> courses = new ArrayList<>();
+
 
     // constructor
     public Student(String studentName, int ID) {
@@ -16,6 +18,16 @@ public class Student {
         enrolledCourses.add(course);
         System.out.println(course.getCourseName() + " has been added.");
     }
+
+    public String getName() {
+        return studentName;
+    }
+
+    // enroll course
+    public void enrollCourse(Course course) {
+        courses.add(course);
+    }
+    
 
     // fees
     public int calculateTotalFees() {
